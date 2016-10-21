@@ -19,6 +19,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         mapView.delegate = self
         
+        mapView.showsUserLocation = true
+        //future update: center coordinate should == user location (grab using core location framework maybe? or have option to put in zipcode)
+        
         mapView.zoomLevel = 15
         mapView.centerCoordinate = CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135)
         
