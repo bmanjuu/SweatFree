@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		688C1A7EB345B5D8E23067BE /* libPods-SweatFree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D00B5D318575A926A83466 /* libPods-SweatFree.a */; };
 		A49E01671DBAC87D00627302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01661DBAC87D00627302 /* AppDelegate.swift */; };
 		A49E01691DBAC87D00627302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01681DBAC87D00627302 /* ViewController.swift */; };
 		A49E016C1DBAC87D00627302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49E016A1DBAC87D00627302 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D00B5D318575A926A83466 /* libPods-SweatFree.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SweatFree.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80373E81633ACF79B7D4C379 /* Pods-SweatFree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweatFree.release.xcconfig"; path = "Pods/Target Support Files/Pods-SweatFree/Pods-SweatFree.release.xcconfig"; sourceTree = "<group>"; };
+		97028F3BD1008783C6C65E65 /* Pods-SweatFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweatFree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SweatFree/Pods-SweatFree.debug.xcconfig"; sourceTree = "<group>"; };
 		A49E01631DBAC87D00627302 /* SweatFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweatFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E01661DBAC87D00627302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A49E01681DBAC87D00627302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688C1A7EB345B5D8E23067BE /* libPods-SweatFree.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4614321CC93C1135C5F178EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11D00B5D318575A926A83466 /* libPods-SweatFree.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		707C81075B45AF5BDB5383D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97028F3BD1008783C6C65E65 /* Pods-SweatFree.debug.xcconfig */,
+				80373E81633ACF79B7D4C379 /* Pods-SweatFree.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A49E015A1DBAC87B00627302 = {
 			isa = PBXGroup;
 			children = (
 				A49E01651DBAC87D00627302 /* SweatFree */,
 				A49E01641DBAC87D00627302 /* Products */,
+				707C81075B45AF5BDB5383D0 /* Pods */,
+				4614321CC93C1135C5F178EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A49E01781DBAC87D00627302 /* Build configuration list for PBXNativeTarget "SweatFree" */;
 			buildPhases = (
+				F7EBF929E5C3513093DEF448 /* [CP] Check Pods Manifest.lock */,
 				A49E015F1DBAC87B00627302 /* Sources */,
 				A49E01601DBAC87B00627302 /* Frameworks */,
 				A49E01611DBAC87B00627302 /* Resources */,
+				F6C881E8158130808C034335 /* [CP] Embed Pods Frameworks */,
+				8686A9293C01BD47F29FDF2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +208,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8686A9293C01BD47F29FDF2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SweatFree/Pods-SweatFree-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6C881E8158130808C034335 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SweatFree/Pods-SweatFree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7EBF929E5C3513093DEF448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A49E015F1DBAC87B00627302 /* Sources */ = {
@@ -316,6 +391,7 @@
 		};
 		A49E01791DBAC87D00627302 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97028F3BD1008783C6C65E65 /* Pods-SweatFree.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SweatFree/Info.plist;
@@ -328,6 +404,7 @@
 		};
 		A49E017A1DBAC87D00627302 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80373E81633ACF79B7D4C379 /* Pods-SweatFree.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SweatFree/Info.plist;

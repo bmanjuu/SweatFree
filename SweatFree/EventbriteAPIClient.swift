@@ -10,11 +10,11 @@ import Foundation
 
 struct EventbriteAPIClient {
     
-    static let store = FitnessEventDataStore.sharedInstance
+    static var store = FitnessEventDataStore.sharedInstance
     
     // typealias fitnessEventCompletion = (FitnessEvent, Error?) ->()
     
-    static func getFreeFitnessEvents(location: String, completion: @escaping(FitnessEvent) -> ()) {
+    static func getFreeFitnessEvents(location: String, completion: @escaping (FitnessEvent) -> ()) {
         
         //location will be zipcode, use mapbox libraries to get coordinates, directions, and display map
         
