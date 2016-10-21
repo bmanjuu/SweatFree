@@ -20,6 +20,7 @@
 		A49E01861DBAC9CC00627302 /* FitnessEventDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01851DBAC9CC00627302 /* FitnessEventDataStore.swift */; };
 		A49E01891DBACA0B00627302 /* MapboxGeocodingAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01881DBACA0B00627302 /* MapboxGeocodingAPIClient.swift */; };
 		A49E018B1DBACA3200627302 /* MapboxDirectionsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */; };
+		A49E018D1DBACC9800627302 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E018C1DBACC9800627302 /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A49E01851DBAC9CC00627302 /* FitnessEventDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessEventDataStore.swift; sourceTree = "<group>"; };
 		A49E01881DBACA0B00627302 /* MapboxGeocodingAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxGeocodingAPIClient.swift; sourceTree = "<group>"; };
 		A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxDirectionsAPIClient.swift; sourceTree = "<group>"; };
+		A49E018C1DBACC9800627302 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				A49E01721DBAC87D00627302 /* LaunchScreen.storyboard */,
 				A49E01751DBAC87D00627302 /* Info.plist */,
 				A49E016D1DBAC87D00627302 /* SweatFree.xcdatamodeld */,
+				A49E018C1DBACC9800627302 /* Secrets.swift */,
 			);
 			path = SweatFree;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				A49E01821DBAC99F00627302 /* EventbriteAPIClient.swift in Sources */,
 				A49E017F1DBAC94700627302 /* UserDataStore.swift in Sources */,
 				A49E01671DBAC87D00627302 /* AppDelegate.swift in Sources */,
+				A49E018D1DBACC9800627302 /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +357,7 @@
 				A49E017A1DBAC87D00627302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
