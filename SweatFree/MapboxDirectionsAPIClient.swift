@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mapbox
 import MapboxDirections
 
 struct MapboxDirectionsAPIClient {
@@ -47,8 +48,10 @@ struct MapboxDirectionsAPIClient {
                 let formattedDistance = distanceFormatter.string(fromMeters: step.distance)
                 print("— \(formattedDistance) —")
             }
+            
         }
     }
+    
 
     
 //    static func getDirectionsToEvent(userLocation: (latitude: Double, longitude:Double), destination: (latitude: Double, longitude: Double)) {
