@@ -23,6 +23,7 @@
 		A49E018B1DBACA3200627302 /* MapboxDirectionsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */; };
 		A49E018D1DBACC9800627302 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E018C1DBACC9800627302 /* Secrets.swift */; };
 		A49E01911DBAD3EE00627302 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01901DBAD3EE00627302 /* MapViewController.swift */; };
+		A4C5A6201DBBDA6C0060FF4F /* colorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxDirectionsAPIClient.swift; sourceTree = "<group>"; };
 		A49E018C1DBACC9800627302 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A49E01901DBAD3EE00627302 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorPalette.swift; sourceTree = "<group>"; };
 		C4BF22A127F5929544E3F3B2 /* Pods_SweatFree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SweatFree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				A49E01751DBAC87D00627302 /* Info.plist */,
 				A49E016D1DBAC87D00627302 /* SweatFree.xcdatamodeld */,
 				A49E018C1DBACC9800627302 /* Secrets.swift */,
+				A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */,
 			);
 			path = SweatFree;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A49E01691DBAC87D00627302 /* ViewController.swift in Sources */,
 				A49E01861DBAC9CC00627302 /* FitnessEventDataStore.swift in Sources */,
 				A49E016F1DBAC87D00627302 /* SweatFree.xcdatamodeld in Sources */,
+				A4C5A6201DBBDA6C0060FF4F /* colorPalette.swift in Sources */,
 				A49E018B1DBACA3200627302 /* MapboxDirectionsAPIClient.swift in Sources */,
 				A49E01911DBAD3EE00627302 /* MapViewController.swift in Sources */,
 				A49E01821DBAC99F00627302 /* EventbriteAPIClient.swift in Sources */,

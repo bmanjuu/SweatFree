@@ -18,28 +18,25 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         let mapView = MGLMapView(frame: view.bounds,
                                  styleURL: MGLStyle.outdoorsStyleURL(withVersion: 9))
-        
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.tintColor = colorPalette.magenta
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657), zoomLevel: 12, animated: false)
         mapView.delegate = self
         
-        // Tint the ℹ️ button and the user location annotation.
-        mapView.tintColor = UIColor.init(red: 111.0/255.0, green: 193.0/255.0, blue: 226.0/255.0, alpha: 1.0)
-        
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
         mapView.showsUserLocation = true
-        //future update: center coordinate should == user location (grab using core location framework maybe? or have option to put in zipcode)
-        
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135), zoomLevel: 15, animated: true)
+
         
         let point = MGLPointAnnotation()
-        point.coordinate = CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135)
-        point.title = "Smorgasburg"
-        point.subtitle = "90 Kent Ave, Brooklyn, NY 11211"
+        point.coordinate = CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657)
+        point.title = "Brooklyn Bridge Park"
+        point.subtitle = "334 Furman St, Brooklyn, NY 11201"
         
         mapView.addAnnotation(point)
+        
+        
         view.addSubview(mapView)
         
-        drawRoute(map: mapView)
+        // drawRoute(map: mapView)
         
     }
     
@@ -51,7 +48,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     
     func drawRoute(map: MGLMapView) {
+        
         let directions = Directions(accessToken: "\(Secrets.mapboxToken)")
+        
+        print("drawRoute function called")
         
         let waypoints = [
             Waypoint(coordinate: CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135), name: "Smorgasburg"),
