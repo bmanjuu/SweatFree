@@ -8,6 +8,8 @@
 
 import Foundation
 
+//
+
 struct User {
     
     var zipcode : String

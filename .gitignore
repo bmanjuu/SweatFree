@@ -65,4 +65,3 @@ fastlane/screenshots
 fastlane/test_output
 
 Secrets.swift
-AppDelegate.swift

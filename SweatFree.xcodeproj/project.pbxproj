@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		688C1A7EB345B5D8E23067BE /* libPods-SweatFree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D00B5D318575A926A83466 /* libPods-SweatFree.a */; };
+		53148C1F1BE70FF0E342A9FC /* Pods_SweatFree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BF22A127F5929544E3F3B2 /* Pods_SweatFree.framework */; };
 		A49E01671DBAC87D00627302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01661DBAC87D00627302 /* AppDelegate.swift */; };
 		A49E01691DBAC87D00627302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01681DBAC87D00627302 /* ViewController.swift */; };
 		A49E016C1DBAC87D00627302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A49E016A1DBAC87D00627302 /* Main.storyboard */; };
@@ -22,10 +22,10 @@
 		A49E01891DBACA0B00627302 /* MapboxGeocodingAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01881DBACA0B00627302 /* MapboxGeocodingAPIClient.swift */; };
 		A49E018B1DBACA3200627302 /* MapboxDirectionsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */; };
 		A49E018D1DBACC9800627302 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E018C1DBACC9800627302 /* Secrets.swift */; };
+		A49E01911DBAD3EE00627302 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E01901DBAD3EE00627302 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11D00B5D318575A926A83466 /* libPods-SweatFree.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SweatFree.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80373E81633ACF79B7D4C379 /* Pods-SweatFree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweatFree.release.xcconfig"; path = "Pods/Target Support Files/Pods-SweatFree/Pods-SweatFree.release.xcconfig"; sourceTree = "<group>"; };
 		97028F3BD1008783C6C65E65 /* Pods-SweatFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweatFree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SweatFree/Pods-SweatFree.debug.xcconfig"; sourceTree = "<group>"; };
 		A49E01631DBAC87D00627302 /* SweatFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweatFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,8 @@
 		A49E01881DBACA0B00627302 /* MapboxGeocodingAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxGeocodingAPIClient.swift; sourceTree = "<group>"; };
 		A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxDirectionsAPIClient.swift; sourceTree = "<group>"; };
 		A49E018C1DBACC9800627302 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		A49E01901DBAD3EE00627302 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C4BF22A127F5929544E3F3B2 /* Pods_SweatFree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SweatFree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				688C1A7EB345B5D8E23067BE /* libPods-SweatFree.a in Frameworks */,
+				53148C1F1BE70FF0E342A9FC /* Pods_SweatFree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 		4614321CC93C1135C5F178EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11D00B5D318575A926A83466 /* libPods-SweatFree.a */,
+				C4BF22A127F5929544E3F3B2 /* Pods_SweatFree.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,11 +101,10 @@
 				A49E01871DBAC9FB00627302 /* Maps */,
 				A49E01801DBAC96500627302 /* Fitness Events */,
 				A49E017B1DBAC8EF00627302 /* User Information */,
+				A49E018E1DBAD12C00627302 /* View Controllers */,
+				A49E018F1DBAD14700627302 /* Storyboards */,
 				A49E01661DBAC87D00627302 /* AppDelegate.swift */,
-				A49E01681DBAC87D00627302 /* ViewController.swift */,
-				A49E016A1DBAC87D00627302 /* Main.storyboard */,
 				A49E01701DBAC87D00627302 /* Assets.xcassets */,
-				A49E01721DBAC87D00627302 /* LaunchScreen.storyboard */,
 				A49E01751DBAC87D00627302 /* Info.plist */,
 				A49E016D1DBAC87D00627302 /* SweatFree.xcdatamodeld */,
 				A49E018C1DBACC9800627302 /* Secrets.swift */,
@@ -137,6 +138,24 @@
 				A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */,
 			);
 			name = Maps;
+			sourceTree = "<group>";
+		};
+		A49E018E1DBAD12C00627302 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A49E01681DBAC87D00627302 /* ViewController.swift */,
+				A49E01901DBAD3EE00627302 /* MapViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A49E018F1DBAD14700627302 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A49E016A1DBAC87D00627302 /* Main.storyboard */,
+				A49E01721DBAC87D00627302 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +288,7 @@
 				A49E01861DBAC9CC00627302 /* FitnessEventDataStore.swift in Sources */,
 				A49E016F1DBAC87D00627302 /* SweatFree.xcdatamodeld in Sources */,
 				A49E018B1DBACA3200627302 /* MapboxDirectionsAPIClient.swift in Sources */,
+				A49E01911DBAD3EE00627302 /* MapViewController.swift in Sources */,
 				A49E01821DBAC99F00627302 /* EventbriteAPIClient.swift in Sources */,
 				A49E017F1DBAC94700627302 /* UserDataStore.swift in Sources */,
 				A49E01671DBAC87D00627302 /* AppDelegate.swift in Sources */,

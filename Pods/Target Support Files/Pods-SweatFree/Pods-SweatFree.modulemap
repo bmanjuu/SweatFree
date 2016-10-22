@@ -1,0 +1,6 @@
+framework module Pods_SweatFree {
+  umbrella header "Pods-SweatFree-umbrella.h"
+
+  export *
+  module * { export * }
+}
