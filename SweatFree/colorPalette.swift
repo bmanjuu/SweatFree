@@ -11,6 +11,6 @@ import UIKit
 
 struct colorPalette {
     
-    static let magenta = UIColor.init(red: 215.0/255.0, green: 24.0/255.0, blue: 121.0/255.0, alpha: 1.0)
+    static let purple = UIColor.init(red: 184.0/255.0, green: 88.0/255.0, blue: 225.0/255.0, alpha: 1.0)
     
 }

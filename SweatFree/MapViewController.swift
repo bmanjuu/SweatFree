@@ -19,11 +19,12 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         let mapView = MGLMapView(frame: view.bounds,
                                  styleURL: MGLStyle.outdoorsStyleURL(withVersion: 9))
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.tintColor = colorPalette.magenta
+        mapView.tintColor = colorPalette.purple
         mapView.setCenter(CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657), zoomLevel: 12, animated: false)
         mapView.delegate = self
         
         mapView.showsUserLocation = true
+        print("current user location: \(mapView.userLocation!.coordinate)")
 
         
         let point = MGLPointAnnotation()
@@ -36,7 +37,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         view.addSubview(mapView)
         
-        // drawRoute(map: mapView)
+        drawRoute(map: mapView, startCoordinate: CLLocationCoordinate2D(latitude: 40.714591, longitude: -73.959990), endCoordinate: point.coordinate)
         
     }
     
@@ -47,15 +48,17 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     
-    func drawRoute(map: MGLMapView) {
+    func drawRoute(map: MGLMapView, startCoordinate: CLLocationCoordinate2D, endCoordinate: CLLocationCoordinate2D) {
         
         let directions = Directions(accessToken: "\(Secrets.mapboxToken)")
         
         print("drawRoute function called")
+        print("start coordinate: \(startCoordinate)")
+        print("end coordinate: \(endCoordinate)")
         
         let waypoints = [
-            Waypoint(coordinate: CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135), name: "Smorgasburg"),
-            Waypoint(coordinate: CLLocationCoordinate2D(latitude: 40.717701, longitude: -73.956528), name: "El Almacén"),
+            Waypoint(coordinate: startCoordinate, name: "start"),
+            Waypoint(coordinate: endCoordinate, name: "end"),
             ]
         
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierAutomobile)
