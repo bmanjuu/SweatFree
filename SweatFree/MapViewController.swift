@@ -11,20 +11,25 @@ import Mapbox
 import MapboxDirections
 
 class MapViewController: UIViewController, MGLMapViewDelegate {
-
-    @IBOutlet var mapView: MGLMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let mapView = MGLMapView(frame: view.bounds,
+                                 styleURL: MGLStyle.outdoorsStyleURL(withVersion: 9))
+        
         mapView.delegate = self
+        
+        // Tint the ℹ️ button and the user location annotation.
+        mapView.tintColor = UIColor.init(red: 111.0/255.0, green: 193.0/255.0, blue: 226.0/255.0, alpha: 1.0)
+        
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         mapView.showsUserLocation = true
         //future update: center coordinate should == user location (grab using core location framework maybe? or have option to put in zipcode)
         
-        mapView.zoomLevel = 15
-        mapView.centerCoordinate = CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135)
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135), zoomLevel: 15, animated: true)
         
         let point = MGLPointAnnotation()
         point.coordinate = CLLocationCoordinate2D(latitude: 40.721898, longitude: -73.962135)
@@ -32,8 +37,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         point.subtitle = "90 Kent Ave, Brooklyn, NY 11211"
         
         mapView.addAnnotation(point)
+        view.addSubview(mapView)
         
-        drawRoute()
+        drawRoute(map: mapView)
         
     }
     
@@ -44,7 +50,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     
-    func drawRoute() {
+    func drawRoute(map: MGLMapView) {
         let directions = Directions(accessToken: "\(Secrets.mapboxToken)")
         
         let waypoints = [
@@ -85,8 +91,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
                     let routeLine = MGLPolyline(coordinates: &routeCoordinates, count: route.coordinateCount)
                     
                     // Add the polyline to the map and fit the viewport to the polyline.
-                    self.mapView.addAnnotation(routeLine)
-                    self.mapView.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsets.zero, animated: true)
+                    map.addAnnotation(routeLine)
+                    map.setVisibleCoordinates(&routeCoordinates, count: route.coordinateCount, edgePadding: UIEdgeInsets.zero, animated: true)
                 }
             }
         }
