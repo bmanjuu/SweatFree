@@ -10,6 +10,8 @@ import Foundation
 
 struct MapboxGeocodingAPIClient {
     
+    //change coordinates of drawRoute function in MapViewVC according to the user and destination coordinates obtained here
+    
     func obtainUserCoordinates(userZipcode: String) {
         
         let mapboxGeocodingURLString = "https://api.mapbox.com/geocoding/v5/mapbox.places/\(userZipcode).json?country=us&access_token=\(Secrets.mapboxToken)"

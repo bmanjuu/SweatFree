@@ -61,6 +61,8 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
             Waypoint(coordinate: endCoordinate, name: "end"),
             ]
         
+        //change profileIdentifier in options according to distance: walking for < 1 mile and driving/cycling for everything else ... or give user the option to choose!
+        
         let options = RouteOptions(waypoints: waypoints, profileIdentifier: MBDirectionsProfileIdentifierAutomobile)
         options.includesSteps = true
         
