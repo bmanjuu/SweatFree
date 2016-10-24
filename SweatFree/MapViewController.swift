@@ -10,7 +10,7 @@ import UIKit
 import Mapbox
 import MapboxDirections
 
-class MapViewController: UIViewController, MGLMapViewDelegate {
+class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,13 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         mapView.setCenter(CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657), zoomLevel: 12, animated: false)
         mapView.delegate = self
         
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        
         mapView.showsUserLocation = true
-        print("current user location: \(mapView.userLocation!.coordinate)")
-        let startCoordinate = mapView.userLocation!.coordinate
+        print("current user location from map: \(mapView.userLocation!.coordinate)")
+        print("CLLocation manager user location: \(locationManager.location!.coordinate)")
+        let startCoordinate = locationManager.location!.coordinate
 
         
         let point = MGLPointAnnotation()
