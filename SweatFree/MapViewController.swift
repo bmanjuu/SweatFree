@@ -25,6 +25,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         mapView.showsUserLocation = true
         print("current user location: \(mapView.userLocation!.coordinate)")
+        let startCoordinate = mapView.userLocation!.coordinate
 
         
         let point = MGLPointAnnotation()
@@ -36,8 +37,9 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
         
         
         view.addSubview(mapView)
+        //CLLocationCoordinate2D(latitude: 40.714591, longitude: -73.959990)
         
-        drawRoute(map: mapView, startCoordinate: CLLocationCoordinate2D(latitude: 40.714591, longitude: -73.959990), endCoordinate: point.coordinate)
+        drawRoute(map: mapView, startCoordinate: startCoordinate, endCoordinate: point.coordinate)
         
     }
     
