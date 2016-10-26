@@ -30,6 +30,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManager
         print("current user location from map: \(mapView.userLocation!.coordinate)")
         print("CLLocation manager user location: \(locationManager.location!.coordinate)")
         let startCoordinate = locationManager.location!.coordinate
+        //need to obtain user coordinates using CLLocation manager not mapView user location coordinates! otherwise, get weird results from coordinates 
 
         
         let point = MGLPointAnnotation()
@@ -41,12 +42,10 @@ class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManager
         
         
         view.addSubview(mapView)
-        //CLLocationCoordinate2D(latitude: 40.714591, longitude: -73.959990)
         
         drawRoute(map: mapView, startCoordinate: startCoordinate, endCoordinate: point.coordinate)
         
     }
-    
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         // Always try to show a callout when an annotation is tapped.
