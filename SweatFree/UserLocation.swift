@@ -11,4 +11,8 @@ import CoreLocation
 
 class UserLocation: NSObject, CLLocationManagerDelegate {
     
+    static func obtainUserLocationCoordinates() {
+        
+    }
+    
 }

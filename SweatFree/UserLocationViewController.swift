@@ -10,6 +10,21 @@ import UIKit
 
 class UserLocationViewController: UIViewController {
     
+    @IBAction func obtainUserLocationButton(_ sender: AnyObject) {
+        
+        //core location in UserLocation class 
+        //reverse geocoding to get zipcode -- mapbox api
+        
+    }
+    
+    @IBAction func submitButton(_ sender: AnyObject) {
+        
+        //display animation here
+        //and then segue into MapViewController 
+        //may need to remove segue in interface builder between MapViewController and submit button 
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

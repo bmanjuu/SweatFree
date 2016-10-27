@@ -37,12 +37,16 @@
                                 <frame key="frameInset" minX="64" minY="236" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Use My Location"/>
+                                <connections>
+                                    <action selector="obtainUserLocationButton:" destination="0fb-oC-kSl" eventType="touchUpInside" id="O4c-q5-iJo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yef-jt-qVA">
                                 <frame key="frameInset" minX="264" minY="236" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sweat!"/>
                                 <connections>
+                                    <action selector="submitButton:" destination="0fb-oC-kSl" eventType="touchUpInside" id="Rmx-Hj-YFR"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="qxp-b0-IxC"/>
                                 </connections>
                             </button>
