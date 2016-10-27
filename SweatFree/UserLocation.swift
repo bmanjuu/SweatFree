@@ -15,4 +15,8 @@ class UserLocation: NSObject, CLLocationManagerDelegate {
         
     }
     
+    static func obtainZipcodeFromCoordinates() {
+        
+    }
+    
 }
