@@ -13,5 +13,5 @@ class UserDataStore {
     
     static let sharedInstance = UserDataStore()
     
-    var user = User.init(zipcode: "test zipcode")
+    var user = User.init(address: "test address")
 }
