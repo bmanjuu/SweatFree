@@ -13,7 +13,7 @@ class UserLocationViewController: UIViewController {
     @IBAction func obtainUserLocationButton(_ sender: AnyObject) {
         
         //core location in UserLocation class 
-        //reverse geocoding to get address (not zipcode) -- mapbox api
+        //reverse geocoding to get zipcode -- mapbox geocoding api
         
     }
     

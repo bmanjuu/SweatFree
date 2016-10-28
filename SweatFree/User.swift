@@ -10,18 +10,18 @@ import Foundation
 
 struct User {
     
-    var address : String
+    var zipcode : String
     var coordinates : (latitude: Double, longitude: Double)?
     var RSVPEvents : [FitnessEvent]?
     
-    init(address: String, coordinates: (Double, Double), RSVPEvents: [FitnessEvent]) {
-        self.address = address
+    init(zipcode: String, coordinates: (Double, Double), RSVPEvents: [FitnessEvent]) {
+        self.zipcode = zipcode
         self.coordinates = coordinates
         self.RSVPEvents = RSVPEvents
     }
     
-    init(address: String) {
-        self.init(address: address, coordinates: (0.00, 0.00), RSVPEvents: [])
+    init(zipcode: String) {
+        self.init(zipcode: zipcode, coordinates: (0.00, 0.00), RSVPEvents: [])
     }
     
 }
