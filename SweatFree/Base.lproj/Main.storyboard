@@ -54,6 +54,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5re-Rd-2QZ"/>
+                    <connections>
+                        <outlet property="userZipcodeTextfield" destination="l5Z-bL-nzh" id="sKq-GN-Z9d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cF7-yh-hcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

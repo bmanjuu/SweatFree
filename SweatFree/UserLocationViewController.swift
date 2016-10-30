@@ -10,10 +10,15 @@ import UIKit
 
 class UserLocationViewController: UIViewController {
     
+    @IBOutlet weak var userZipcodeTextfield: UITextField!
+    
     @IBAction func obtainUserLocationButton(_ sender: AnyObject) {
         
         //core location in UserLocation class 
         //reverse geocoding to get zipcode -- mapbox geocoding api
+        
+        //default (will implement core location later) 
+        userZipcodeTextfield.text = "10010"
         
     }
     
