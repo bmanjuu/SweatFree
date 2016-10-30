@@ -16,34 +16,18 @@ class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManager
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let mapView = MGLMapView(frame: view.bounds,
-                                 styleURL: MGLStyle.outdoorsStyleURL(withVersion: 9))
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.tintColor = colorPalette.purple
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657), zoomLevel: 12, animated: false)
-        mapView.delegate = self
-        
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         
-        mapView.showsUserLocation = true
-        print("current user location from map: \(mapView.userLocation!.coordinate)")
-        print("CLLocation manager user location: \(locationManager.location!.coordinate)")
-        let startCoordinate = locationManager.location!.coordinate
-        //need to obtain user coordinates using CLLocation manager not mapView user location coordinates! otherwise, get weird results from coordinates 
-
-        
-        let point = MGLPointAnnotation()
-        point.coordinate = CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657)
-        point.title = "Brooklyn Bridge Park"
-        point.subtitle = "334 Furman St, Brooklyn, NY 11201"
-        
-        mapView.addAnnotation(point)
+        let mapView = createMapView()
+        let startCoordinate = currentUserLocation(mapView: mapView, locationManager: locationManager)
+        let endCoordinate = CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657) //this is default end coordinate, should be replaced with the locations of different events
+        addAnnotationFor(mapView: mapView, annotationCoordinate: endCoordinate)
         
         
         view.addSubview(mapView)
         
-        drawRoute(map: mapView, startCoordinate: startCoordinate, endCoordinate: point.coordinate)
+        drawRoute(map: mapView, startCoordinate: startCoordinate, endCoordinate: endCoordinate)
         
     }
     
@@ -51,6 +35,41 @@ class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManager
         // Always try to show a callout when an annotation is tapped.
         return true
     }
+    
+    func createMapView() -> MGLMapView {
+        let mapView = MGLMapView(frame: view.bounds,
+                                 styleURL: MGLStyle.outdoorsStyleURL(withVersion: 9))
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.tintColor = colorPalette.purple
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657), zoomLevel: 12, animated: false)
+        mapView.delegate = self
+        
+        return mapView
+    }
+    
+    func currentUserLocation(mapView: MGLMapView, locationManager: CLLocationManager) -> CLLocationCoordinate2D {
+        mapView.showsUserLocation = true
+        print("current user location from map: \(mapView.userLocation!.coordinate)")
+        print("CLLocation manager user location: \(locationManager.location!.coordinate)")
+        let startCoordinate = locationManager.location!.coordinate
+        //need to obtain user coordinates using CLLocation manager not mapView user location coordinates! otherwise, get weird results from coordinates
+        
+        return startCoordinate
+    }
+    
+    func addAnnotationFor(mapView: MGLMapView, annotationCoordinate: CLLocationCoordinate2D) {
+        
+        let point = MGLPointAnnotation()
+        point.coordinate = annotationCoordinate
+        
+        point.title = "Brooklyn Bridge Park"
+        point.subtitle = "334 Furman St, Brooklyn, NY 11201"
+        //will need to adjust these according to which event the user selects
+        
+        mapView.addAnnotation(point)
+    }
+    
+    
     
     
     func drawRoute(map: MGLMapView, startCoordinate: CLLocationCoordinate2D, endCoordinate: CLLocationCoordinate2D) {
