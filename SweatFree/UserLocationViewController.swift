@@ -17,7 +17,7 @@ class UserLocationViewController: UIViewController {
         //core location in UserLocation class 
         //reverse geocoding to get zipcode -- mapbox geocoding api
         
-        //default (will implement core location later) 
+        //default zipcode (will implement core location later)
         userZipcodeTextfield.text = "10010"
         
     }
@@ -25,10 +25,15 @@ class UserLocationViewController: UIViewController {
     @IBAction func submitButton(_ sender: AnyObject) {
         
         //display animation here
+        //implement function that checks validity of text entered (5 numbers, no symbols/spaces/letters)
         //and then segue into MapViewController 
-        //may need to remove segue in interface builder between MapViewController and submit button 
+        //may need to remove segue in interface builder between MapViewController and submit button b/c this should segue into VC with list of fitness events in their area, mapview should only be shown after they choose an event
         
         //send zipcode over to geocoding api to get coordinates of user
+        MapboxGeocodingAPIClient.zipcodeSearchWithCompletion(userLocationZipcode: userZipcodeTextfield.text!, completion: { (locationCompletion) in
+            print("called geocoding api client for \(self.userZipcodeTextfield.text!)")
+            
+        })
     }
     
     

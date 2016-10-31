@@ -38,7 +38,7 @@ struct MapboxGeocodingDataParser {
             return Location()
         }
         
-        let userLocation = Location(name: "\(userZipcode)", coordinates: (coordinates[0], coordinates[1]), description: "my location")
+        let userLocation = Location(name: "\(userZipcode)", coordinates: (coordinates[1], coordinates[0]), description: "my location")
         self.store.user.location = userLocation
         
         print("***** USER LOCATION INFORMATION ******")

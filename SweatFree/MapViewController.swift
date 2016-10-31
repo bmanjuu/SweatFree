@@ -12,6 +12,8 @@ import MapboxDirections
 
 class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDelegate {
     
+    static let store = UserDataStore.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
