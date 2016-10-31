@@ -15,7 +15,17 @@ struct MapboxGeocodingAPIClient {
     static var userZipcode : String = "10010" //default zipcode
     static var userCoordinates : (Double, Double) = (0.00, 0.00) //default coordinates
     
-    func zipcodeSearchWithCompletion(userLocationZipcode: String, completion: @escaping([[String:AnyObject]]) ->()) {
+    enum MapboxGeocodingAPIError: Error {
+        case InvalidJSONDictionaryCast
+        case InvalidDictionaryResponseKey
+        case InvalidDictionaryDocsKey
+    }
+    
+    
+    typealias MapboxGeocodingCompletion = ([[String:AnyObject]], Error?) -> ()
+    
+    
+    func zipcodeSearchWithCompletion(userLocationZipcode: String, completion: @escaping MapboxGeocodingCompletion) {
         
         let mapboxGeocodingURLString = "https://api.mapbox.com/geocoding/v5/mapbox.places/\(userLocationZipcode).json?country=us&access_token=\(Secrets.mapboxToken)"
         
@@ -27,6 +37,8 @@ struct MapboxGeocodingAPIClient {
         let session = URLSession.shared
         let task = session.dataTask(with: mapboxGeocodingURL, completionHandler: {
             (data, response, error) in
+            
+            var zipcodeSearchResults = [[String:AnyObject]]()
             
             if let data = data {
                 if let responseData = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
