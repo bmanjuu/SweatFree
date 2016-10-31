@@ -20,15 +20,15 @@ class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManager
         locationManager.delegate = self
         
         let mapView = createMapView()
+        
         let startCoordinate = currentUserLocation(mapView: mapView, locationManager: locationManager)
         let endCoordinate = CLLocationCoordinate2D(latitude: 40.700454, longitude: -73.996657) //this is default end coordinate, should be replaced with the locations of different events
+        //need to create properties that will adjust 
+        
         addAnnotationFor(mapView: mapView, annotationCoordinate: endCoordinate)
-        
-        
-        view.addSubview(mapView)
-        
         drawRoute(map: mapView, startCoordinate: startCoordinate, endCoordinate: endCoordinate)
         
+        view.addSubview(mapView)
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
@@ -68,8 +68,6 @@ class MapViewController: UIViewController, MGLMapViewDelegate, CLLocationManager
         
         mapView.addAnnotation(point)
     }
-    
-    
     
     
     func drawRoute(map: MGLMapView, startCoordinate: CLLocationCoordinate2D, endCoordinate: CLLocationCoordinate2D) {

@@ -28,6 +28,7 @@ class UserLocationViewController: UIViewController {
         //and then segue into MapViewController 
         //may need to remove segue in interface builder between MapViewController and submit button 
         
+        //send zipcode over to geocoding api to get coordinates of user
     }
     
     

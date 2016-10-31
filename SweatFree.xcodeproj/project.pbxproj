@@ -26,6 +26,7 @@
 		A4C4EC6E1DC02AF4001114B5 /* UserLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4EC6D1DC02AF4001114B5 /* UserLocationViewController.swift */; };
 		A4C4EC701DC0331F001114B5 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4EC6F1DC0331F001114B5 /* UserLocation.swift */; };
 		A4C5A6201DBBDA6C0060FF4F /* colorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */; };
+		A4DD50921DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD50911DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		A4C4EC6D1DC02AF4001114B5 /* UserLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationViewController.swift; sourceTree = "<group>"; };
 		A4C4EC6F1DC0331F001114B5 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorPalette.swift; sourceTree = "<group>"; };
+		A4DD50911DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxGeocodingDataParser.swift; sourceTree = "<group>"; };
 		C4BF22A127F5929544E3F3B2 /* Pods_SweatFree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SweatFree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A49E01881DBACA0B00627302 /* MapboxGeocodingAPIClient.swift */,
+				A4DD50911DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift */,
 				A49E018A1DBACA3200627302 /* MapboxDirectionsAPIClient.swift */,
 			);
 			name = Maps;
@@ -297,6 +300,7 @@
 				A49E01861DBAC9CC00627302 /* FitnessEventDataStore.swift in Sources */,
 				A49E016F1DBAC87D00627302 /* SweatFree.xcdatamodeld in Sources */,
 				A4C4EC6E1DC02AF4001114B5 /* UserLocationViewController.swift in Sources */,
+				A4DD50921DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift in Sources */,
 				A4C5A6201DBBDA6C0060FF4F /* colorPalette.swift in Sources */,
 				A49E018B1DBACA3200627302 /* MapboxDirectionsAPIClient.swift in Sources */,
 				A4C4EC701DC0331F001114B5 /* UserLocation.swift in Sources */,
