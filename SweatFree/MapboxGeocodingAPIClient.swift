@@ -13,9 +13,6 @@ struct MapboxGeocodingAPIClient {
     
     //change coordinates of drawRoute function in MapViewVC according to the user and destination coordinates obtained here
     
-//    static var userZipcode : String = "10010" //default zipcode
-//    static var userCoordinates = User(coordinates: (0.00, 0.00)) //default coordinates
-    
     enum MapboxGeocodingAPIError: Error {
         case InvalidJSONDictionaryCast
         case InvalidDictionaryResponseKey
@@ -23,10 +20,10 @@ struct MapboxGeocodingAPIClient {
     }
     
     
-    typealias MapboxGeocodingCompletion = (User, Error?) -> ()
+    typealias MapboxGeocodingCompletion = (Location, Error?) -> ()
     
     
-    func zipcodeSearchWithCompletion(userLocationZipcode: String, completion: @escaping MapboxGeocodingCompletion) {
+    static func zipcodeSearchWithCompletion(userLocationZipcode: String, completion: @escaping MapboxGeocodingCompletion) {
         
         let mapboxGeocodingURLString = "https://api.mapbox.com/geocoding/v5/mapbox.places/\(userLocationZipcode).json?country=us&access_token=\(Secrets.mapboxToken)"
         guard let mapboxGeocodingURL = URL(string: mapboxGeocodingURLString) else {
@@ -42,17 +39,17 @@ struct MapboxGeocodingAPIClient {
             switch response.result {
                 
                 case .failure(let error):
-                    completion(User(), error)
+                    completion(Location(), error)
                 
                 case .success(let value):
-                    guard let zipcodeResponse = value as? NSDictionary else { completion(User(), MapboxGeocodingAPIError.InvalidJSONDictionaryCast); return }
-                    guard let zipcodeArray = zipcodeResponse["features"] as? [[String:AnyObject]] else { completion(User(), MapboxGeocodingAPIError.InvalidDictionaryResponseKey)
+                    guard let zipcodeResponse = value as? NSDictionary else { completion(Location(), MapboxGeocodingAPIError.InvalidJSONDictionaryCast); return }
+                    guard let zipcodeArray = zipcodeResponse["features"] as? [[String:AnyObject]] else { completion(Location(), MapboxGeocodingAPIError.InvalidDictionaryResponseKey)
                         return }
                 
                 zipcodeSearchResults = zipcodeArray
+                print("\n\n\n\n\n\nZIPCODE RESULTS: \n \(zipcodeSearchResults)\n\n\n\n\n\n")
             }
-            
-            completion(MapboxGeocodingDataParser.getUserLocationCoordinates(zipcodeResults: zipcodeSearchResults), nil)
+            completion(MapboxGeocodingDataParser.getUserLocationCoordinates(userZipcode: userLocationZipcode, zipcodeResults: zipcodeSearchResults), nil)
             
         }
     }

@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Secrets.setMapboxAccessToken()
         
+        MapboxGeocodingAPIClient.zipcodeSearchWithCompletion(userLocationZipcode: "10010", completion: { (locationCompletion) in
+            print("called geocoding api client")
+        })
+        
         return true
     }
 

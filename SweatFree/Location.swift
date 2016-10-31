@@ -14,10 +14,14 @@ struct Location {
     var coordinates : (latitude: Double, longitude: Double)
     var description : String
     
-    init(name: String, coordinates: (Double, Double), description: String) {
+    init(name: String, coordinates: (latitude: Double, longitude: Double), description: String) {
         self.name = name
         self.coordinates = coordinates
         self.description = description
+    }
+    
+    init(coordinates: (latitude: Double, longitude: Double)) {
+        self.init(name: "location name", coordinates: coordinates, description: "location description")
     }
     
     init() {

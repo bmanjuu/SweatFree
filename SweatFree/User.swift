@@ -21,11 +21,15 @@ struct User {
     }
     
     init(zipcode: String) {
-        self.init(zipcode: zipcode, location: Location(), RSVPEvents: [])
+        self.init(zipcode: zipcode, location: Location(), RSVPEvents: [FitnessEvent]())
+    }
+    
+    init(location: Location) {
+        self.init(zipcode: "user zipcode", location: location, RSVPEvents: [FitnessEvent]())
     }
     
     init() {
-        self.init(zipcode: String(), location: Location(), RSVPEvents: [FitnessEvent]())
+        self.init(zipcode: "user zipcode", location: Location(), RSVPEvents: [FitnessEvent]())
     }
     
 }
