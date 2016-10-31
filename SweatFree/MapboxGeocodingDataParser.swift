@@ -10,6 +10,11 @@ import Foundation
 
 struct MapboxGeocodingDataParser {
     
-    
+    static func getUserLocationCoordinates(zipcodeResults: [[String:AnyObject]]) -> User {
+        
+        for result in zipcodeResults {
+            
+        }
+    }
     
 }

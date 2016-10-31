@@ -27,6 +27,7 @@
 		A4C4EC701DC0331F001114B5 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4EC6F1DC0331F001114B5 /* UserLocation.swift */; };
 		A4C5A6201DBBDA6C0060FF4F /* colorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */; };
 		A4DD50921DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD50911DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift */; };
+		A4E7C6401DC7C392003F3864 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C63F1DC7C392003F3864 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		A4C4EC6F1DC0331F001114B5 /* UserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		A4C5A61F1DBBDA6C0060FF4F /* colorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorPalette.swift; sourceTree = "<group>"; };
 		A4DD50911DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapboxGeocodingDataParser.swift; sourceTree = "<group>"; };
+		A4E7C63F1DC7C392003F3864 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C4BF22A127F5929544E3F3B2 /* Pods_SweatFree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SweatFree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A49E017C1DBAC91300627302 /* User.swift */,
+				A4E7C63F1DC7C392003F3864 /* Location.swift */,
 				A4C4EC6F1DC0331F001114B5 /* UserLocation.swift */,
 				A49E017E1DBAC94700627302 /* UserDataStore.swift */,
 			);
@@ -298,6 +301,7 @@
 				A49E017D1DBAC91300627302 /* User.swift in Sources */,
 				A49E01691DBAC87D00627302 /* ViewController.swift in Sources */,
 				A49E01861DBAC9CC00627302 /* FitnessEventDataStore.swift in Sources */,
+				A4E7C6401DC7C392003F3864 /* Location.swift in Sources */,
 				A49E016F1DBAC87D00627302 /* SweatFree.xcdatamodeld in Sources */,
 				A4C4EC6E1DC02AF4001114B5 /* UserLocationViewController.swift in Sources */,
 				A4DD50921DC7B33900E9C0AD /* MapboxGeocodingDataParser.swift in Sources */,
@@ -431,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SweatFree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bettyfung.SweatFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SweatFree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bettyfung.SweatFree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
