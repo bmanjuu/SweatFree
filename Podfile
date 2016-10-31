@@ -6,6 +6,5 @@ target 'SweatFree' do
 
   pod 'Mapbox-iOS-SDK', '~> 3.3.4'
   pod 'MapboxDirections.swift', :git => 'https://github.com/mapbox/MapboxDirections.swift.git', :branch => 'swift3'
-  pod 'Alamofire', '~> 4.0'
 
 end

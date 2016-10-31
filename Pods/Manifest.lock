@@ -1,12 +1,10 @@
 PODS:
-  - Alamofire (4.0.1)
   - Mapbox-iOS-SDK (3.3.4)
   - MapboxDirections.swift (0.6.0):
     - Polyline (~> 4.0.0)
   - Polyline (4.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
   - Mapbox-iOS-SDK (~> 3.3.4)
   - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, branch `swift3`)
 
@@ -21,11 +19,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/mapbox/MapboxDirections.swift.git
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Mapbox-iOS-SDK: b22da0d9703fcfb0a8b592b6a7f6a21264fe44b0
   MapboxDirections.swift: 4acd753d0079bae4f2fae2b2cbda98922909de09
   Polyline: c6de7430bf6ff0bfff1f087343597b83b38fdb69
 
-PODFILE CHECKSUM: 7d6c4b5e995a4dee1a2b0c59104a4a65f69a088a
+PODFILE CHECKSUM: ed31e85eb165014b2c494efa7d04f768696e9680
 
 COCOAPODS: 1.1.1
